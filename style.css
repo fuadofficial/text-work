@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background-color: rgb(172, 230, 230);
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    /* animation: expand 3s ease-in-out 2s infinite; */
+    transition:  2s ease-in-out ;
+}
+div:hover{
+    /* animation-play-state: paused; */
+    background-color:red ;
+    transform: skew(20deg);
+    transform-origin:top left;
+    
+}
+@keyframes expand{
+    0%{
+       width: 100px;
+       height: 100px;
+       background-color: pink;
+    }
+    50%{
+        width: 600px;
+        height: 200px;
+        background-color: blue;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(23, 27, 27);
+    }
+}
