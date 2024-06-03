@@ -94,23 +94,37 @@
 
 /* <!-- work 8 sum of all numbers--> */
 
-document.getElementById("addBtn").addEventListener("click", () => {
-    const numberInput = document.getElementById("numberInput");
-    const numbersList = document.getElementById("numbersList");
-    const totalSpan = document.getElementById("total");
+// document.getElementById("addBtn").addEventListener("click", () => {
+//     const numberInput = document.getElementById("numberInput");
+//     const numbersList = document.getElementById("numbersList");
+//     const totalSpan = document.getElementById("total");
 
-    const number = parseFloat(numberInput.value);
+//     const number = parseFloat(numberInput.value);
 
-    if (!isNaN(number)) {
-        const numberItem = document.createElement("span");
-        numberItem.textContent = number + ", ";
-        numbersList.appendChild(numberItem);
+//     if (!isNaN(number)) {
+//         const numberItem = document.createElement("span");
+//         numberItem.textContent = number + ", ";
+//         numbersList.appendChild(numberItem);
 
-        const total = parseFloat(totalSpan.textContent) + number;
-        totalSpan.textContent = total;
+//         const total = parseFloat(totalSpan.textContent) + number;
+//         totalSpan.textContent = total;
 
-        numberInput.value = "";
-    } else {
-        alert("Please enter a valid number.");
+//         numberInput.value = "";
+//     } else {
+//         alert("Please enter a valid number.");
+//     }
+// });
+
+/* <!-- work 9 order number loop--> */
+
+document.getElementById("button").addEventListener("click", () => {
+    let output = "";
+    for (let i = 1; i <= 5; i++) {
+        let line = "";
+        for (let j = 1; j <= i; j++) {
+            line += j;
+        }
+        output += line + "<br>"; // Add line break after each inner loop
     }
+    document.getElementById("output").innerHTML = output;
 });
