@@ -39,35 +39,54 @@
 
 // <!-- work 6-->
 
-document.getElementById("submit").addEventListener("click", () => {
-    const dayNumber = parseInt(document.getElementById("input").value);
-    let day;
+// document.getElementById("submit").addEventListener("click", () => {
+//     const dayNumber = parseInt(document.getElementById("input").value);
+//     let day;
 
-    switch (dayNumber) {
-        case 1:
-            day = "Sunday";
-            break;
-        case 2:
-            day = "Monday";
-            break;
-        case 3:
-            day = "Tuesday";
-            break;
-        case 4:
-            day = "Wednesday";
-            break;
-        case 5:
-            day = "Thursday";
-            break;
-        case 6:
-            day = "Friday";
-            break;
-        case 7:
-            day = "Saturday";
-            break;
-        default:
-            day = "Invalid Input. Please enter a number between 1 and 7.";
+//     switch (dayNumber) {
+//         case 1:
+//             day = "Sunday";
+//             break;
+//         case 2:
+//             day = "Monday";
+//             break;
+//         case 3:
+//             day = "Tuesday";
+//             break;
+//         case 4:
+//             day = "Wednesday";
+//             break;
+//         case 5:
+//             day = "Thursday";
+//             break;
+//         case 6:
+//             day = "Friday";
+//             break;
+//         case 7:
+//             day = "Saturday";
+//             break;
+//         default:
+//             day = "Invalid Input. Please enter a number between 1 and 7.";
+//     }
+
+//     document.getElementById("day").innerHTML = day;
+// });
+
+
+// <!-- work 7-->
+
+document.getElementById("generateBtn").addEventListener("click", () => {
+    const number = parseInt(document.getElementById("numberInput").value);
+    const tableContainer = document.getElementById("tableContainer");
+
+    if (!isNaN(number)) {
+        let tableHTML = "<h2>Multiplication Table = " + number + "</h2><table>";
+        for (let i = 1; i <= 10; i++) {
+            tableHTML += "<tr><td>" + number + " x " + i + "</td><td>=</td><td>" + (number * i) + "</td></tr>";
+        }
+        tableHTML += "</table>";
+        tableContainer.innerHTML = tableHTML;
+    } else {
+        tableContainer.innerHTML = "<p>Please enter a valid number.</p>";
     }
-
-    document.getElementById("day").innerHTML = day;
 });
