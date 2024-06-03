@@ -117,14 +117,27 @@
 
 /* <!-- work 9 order number loop--> */
 
-document.getElementById("button").addEventListener("click", () => {
-    let output = "";
-    for (let i = 1; i <= 5; i++) {
-        let line = "";
-        for (let j = 1; j <= i; j++) {
-            line += j;
-        }
-        output += line + "<br>"; // Add line break after each inner loop
-    }
-    document.getElementById("output").innerHTML = output;
-});
+// document.getElementById("button").addEventListener("click", () => {
+//     let output = "";
+//     for (let i = 1; i <= 5; i++) {
+//         let line = "";
+//         for (let j = 1; j <= i; j++) {
+//             line += j;
+//         }
+//         output += line + "<br>"; // Add line break after each inner loop
+//     }
+//     document.getElementById("output").innerHTML = output;
+// });
+
+/* <!-- work 10 arry--> */
+
+function swapArrays() {
+    var array1 = document.getElementById('array1').value.split(',');
+    var array2 = document.getElementById('array2').value.split(',');
+
+    var temp = array1;
+    array1 = array2;
+    array2 = temp;
+
+    document.getElementById('result').innerHTML = "Array 1 after swapping: " + array1.join(', ') + "<br>Array 2 after swapping: " + array2.join(', ');
+}

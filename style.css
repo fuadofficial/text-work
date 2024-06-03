@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
+} */
 
 /* work 4 */
 
@@ -179,4 +179,27 @@ button:hover {
     font-weight: bold;
 } */
 
-/* <!-- work 9 order number loop--> */
+/* <!-- work 10 arry--> */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
