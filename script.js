@@ -131,13 +131,38 @@
 
 /* <!-- work 10 arry--> */
 
-function swapArrays() {
-    var array1 = document.getElementById('array1').value.split(',');
-    var array2 = document.getElementById('array2').value.split(',');
+// function swapArrays() {
+//     var array1 = document.getElementById('array1').value.split(',');
+//     var array2 = document.getElementById('array2').value.split(',');
 
-    var temp = array1;
-    array1 = array2;
-    array2 = temp;
+//     var temp = array1;
+//     array1 = array2;
+//     array2 = temp;
 
-    document.getElementById('result').innerHTML = "Array 1 after swapping: " + array1.join(', ') + "<br>Array 2 after swapping: " + array2.join(', ');
+//     document.getElementById('result').innerHTML = "Array 1 after swapping: " + array1.join(', ') + "<br>Array 2 after swapping: " + array2.join(', ');
+// }
+
+/* <!-- work 11 arry--> */
+
+function countEven() {
+    var inputArray = document.getElementById('arrayInput').value.split(',');
+    var evenCount = 0;
+    var hasNonNumeric = false;
+
+    for (var i = 0; i < inputArray.length; i++) {
+        var num = parseInt(inputArray[i]);
+        if (isNaN(num)) {
+            hasNonNumeric = true;
+            break;
+        }
+        if (num % 2 === 0) {
+            evenCount++;
+        }
+    }
+
+    if (hasNonNumeric) {
+        document.getElementById('result').innerHTML = "Please enter only numbers";
+    } else {
+        document.getElementById('result').innerHTML = "Count of even numbers: " + evenCount;
+    }
 }
