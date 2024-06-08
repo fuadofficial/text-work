@@ -230,7 +230,7 @@ button:hover {
  
 <!-- /* work 12 arry sort*/
 
-.container {
+/* .container {
     text-align: center;
     margin-top: 50px;
 }
@@ -241,5 +241,20 @@ button {
 }
 
 #sortedNumbers {
+    margin-top: 20px;
+} */
+
+/* <!-- /* work 13  is palindrome*/
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input,
+button {
+    margin-top: 10px;
+}
+
+#result {
     margin-top: 20px;
 }

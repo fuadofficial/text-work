@@ -169,10 +169,26 @@
 
 // <!-- /* work 12 arry sort*/ -->
 
-function sortNumbers() {
-    var inputNumbers = document.getElementById('numbers').value;
-    var numbersArray = inputNumbers.split(',').map(Number); // Split the input string into an array of numbers
-    numbersArray.sort(function (a, b) { return a - b }); // Sort the array in ascending order
-    var sortedNumbersDiv = document.getElementById('sortedNumbers');
-    sortedNumbersDiv.innerHTML = 'Sorted Numbers: ' + numbersArray.join(', '); // Display the sorted numbers
+// function sortNumbers() {
+//     var inputNumbers = document.getElementById('numbers').value;
+//     var numbersArray = inputNumbers.split(',').map(Number); // Split the input string into an array of numbers
+//     numbersArray.sort(function (a, b) { return a - b }); // Sort the array in ascending order
+//     var sortedNumbersDiv = document.getElementById('sortedNumbers');
+//     sortedNumbersDiv.innerHTML = 'Sorted Numbers: ' + numbersArray.join(', '); // Display the sorted numbers
+// }
+
+
+// <!-- /* work 13  is palindrome*/ -->
+
+function checkPalindrome() {
+    var inputString = document.getElementById('inputString').value;
+    var reversedString = inputString.split('').reverse().join('');
+    var resultDiv = document.getElementById('result');
+
+    if (inputString === reversedString) {
+        resultDiv.innerHTML = '"' + inputString + '" is a palindrome.';
+    } else {
+        resultDiv.innerHTML = '"' + inputString + '" is not a palindrome.';
+    }
 }
+
