@@ -144,25 +144,35 @@
 
 /* <!-- work 11 arry--> */
 
-function countEven() {
-    var inputArray = document.getElementById('arrayInput').value.split(',');
-    var evenCount = 0;
-    var hasNonNumeric = false;
+// function countEven() {
+//     var inputArray = document.getElementById('arrayInput').value.split(',');
+//     var evenCount = 0;
+//     var hasNonNumeric = false;
 
-    for (var i = 0; i < inputArray.length; i++) {
-        var num = parseInt(inputArray[i]);
-        if (isNaN(num)) {
-            hasNonNumeric = true;
-            break;
-        }
-        if (num % 2 === 0) {
-            evenCount++;
-        }
-    }
+//     for (var i = 0; i < inputArray.length; i++) {
+//         var num = parseInt(inputArray[i]);
+//         if (isNaN(num)) {
+//             hasNonNumeric = true;
+//             break;
+//         }
+//         if (num % 2 === 0) {
+//             evenCount++;
+//         }
+//     }
 
-    if (hasNonNumeric) {
-        document.getElementById('result').innerHTML = "Please enter only numbers";
-    } else {
-        document.getElementById('result').innerHTML = "Count of even numbers: " + evenCount;
-    }
+//     if (hasNonNumeric) {
+//         document.getElementById('result').innerHTML = "Please enter only numbers";
+//     } else {
+//         document.getElementById('result').innerHTML = "Count of even numbers: " + evenCount;
+//     }
+// }
+
+// <!-- /* work 12 arry sort*/ -->
+
+function sortNumbers() {
+    var inputNumbers = document.getElementById('numbers').value;
+    var numbersArray = inputNumbers.split(',').map(Number); // Split the input string into an array of numbers
+    numbersArray.sort(function (a, b) { return a - b }); // Sort the array in ascending order
+    var sortedNumbersDiv = document.getElementById('sortedNumbers');
+    sortedNumbersDiv.innerHTML = 'Sorted Numbers: ' + numbersArray.join(', '); // Display the sorted numbers
 }
