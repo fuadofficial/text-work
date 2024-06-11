@@ -226,3 +226,7 @@
 
 //     document.getElementById('result').innerHTML = "Sum: <br>" + sumArray.map(line => line.join(' ')).join('<br>');
 // }
+
+
+
+
