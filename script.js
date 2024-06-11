@@ -194,35 +194,35 @@
 
 // <!-- /* work 14  is sum of two array*/ -->
 
-function calculateSum() {
-    var array1Input = document.getElementById('array1').value;
-    var array2Input = document.getElementById('array2').value;
+// function calculateSum() {
+//     var array1Input = document.getElementById('array1').value;
+//     var array2Input = document.getElementById('array2').value;
 
-    var array1Lines = array1Input.split('\n');
-    var array2Lines = array2Input.split('\n');
+//     var array1Lines = array1Input.split('\n');
+//     var array2Lines = array2Input.split('\n');
 
-    var sumArray = [];
+//     var sumArray = [];
 
-    if (array1Lines.length !== array2Lines.length) {
-        document.getElementById('result').innerHTML = "Arrays must have the same number of elements.";
-        return;
-    }
+//     if (array1Lines.length !== array2Lines.length) {
+//         document.getElementById('result').innerHTML = "Arrays must have the same number of elements.";
+//         return;
+//     }
 
-    for (var i = 0; i < array1Lines.length; i++) {
-        var array1Elements = array1Lines[i].trim().split(' ').map(Number);
-        var array2Elements = array2Lines[i].trim().split(' ').map(Number);
+//     for (var i = 0; i < array1Lines.length; i++) {
+//         var array1Elements = array1Lines[i].trim().split(' ').map(Number);
+//         var array2Elements = array2Lines[i].trim().split(' ').map(Number);
 
-        if (array1Elements.length !== array2Elements.length) {
-            document.getElementById('result').innerHTML = "Each line must have the same number of elements.";
-            return;
-        }
+//         if (array1Elements.length !== array2Elements.length) {
+//             document.getElementById('result').innerHTML = "Each line must have the same number of elements.";
+//             return;
+//         }
 
-        var sumLine = [];
-        for (var j = 0; j < array1Elements.length; j++) {
-            sumLine.push(array1Elements[j] + array2Elements[j]);
-        }
-        sumArray.push(sumLine);
-    }
+//         var sumLine = [];
+//         for (var j = 0; j < array1Elements.length; j++) {
+//             sumLine.push(array1Elements[j] + array2Elements[j]);
+//         }
+//         sumArray.push(sumLine);
+//     }
 
-    document.getElementById('result').innerHTML = "Sum: <br>" + sumArray.map(line => line.join(' ')).join('<br>');
-}
+//     document.getElementById('result').innerHTML = "Sum: <br>" + sumArray.map(line => line.join(' ')).join('<br>');
+// }
